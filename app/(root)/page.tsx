@@ -1,9 +1,10 @@
 import HeaderBox from '@/components/HeaderBox';
 import RightSidebar from '@/components/RightSidebar';
 import TotalBalanceBox from '@/components/TotalBalanceBox';
+import { layouts } from 'chart.js';
 
 const Home = () => {
-  const loggedIn = { firstName: 'Vadim' };
+  const loggedIn = { firstName: 'Vadim', lastName: 'Kachanovskiy', email: 'vadimskyi1@gmail.com'};
 
   return (
     <section className="home">
@@ -29,7 +30,7 @@ const Home = () => {
       <RightSidebar
         user={loggedIn}
         transactions={[]}
-        banks={[]}
+        banks={[{currentBalance: 123.50}, {currentBalance: 500.50}]}
       />
     </section>
   );
